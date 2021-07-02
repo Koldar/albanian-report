@@ -1,0 +1,35 @@
+% !TEX encoding = UTF-8 Unicode
+
+\newcommand{\edot}{%
+    ë%
+    %{\"{e}}%
+}
+
+\newcommand{\e}{%
+    ë%
+    %{{\"e}}%
+}
+
+% param 1 italian
+% param 2 albanian
+\newcommand{\addTranslation}[4][]{%
+    % FORM ITALIAN TO ALBANIAN
+    \newglossaryentry{#1}%
+    {%
+        type={itan},%
+        name={#1},%
+        description={#2}%
+    }%
+    %
+    % FORM ALBANIAN TO ITALIAN
+    \newglossaryentry{#2}%
+    {%
+        type={anit},%
+        name={#2},%
+        description={#1}%
+    }%
+}
+
+\NewDocumentCommand{\addTranslationRow}{m}{%
+    {#1} & \Glsdesc{#1}%
+}
