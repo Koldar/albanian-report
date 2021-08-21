@@ -33,3 +33,24 @@
 \NewDocumentCommand{\addTranslationRow}{O{#2} m}{%
     {#2} & \Glsdesc{#1}%
 }
+
+% param 1 italian
+% param 2 albanian
+% param 3 italian
+% param 4 albanian
+\NewDocumentCommand{\addDoubleTranslationRow}{O{#2} m O{#4} m}{%
+    {#2} & \Glsdesc{#1} & {#4} & \Glsdesc{#3} %
+}
+
+% param 1 italian
+% param 2 albanian
+% param 3 italian
+% param 4 albanian
+\NewDocumentCommand{\addTripleTranslationRow}{O{#2} m O{#4} m O{#6} m}{%
+    {#2} & \Glsdesc{#1} & {#4} & \Glsdesc{#3} & {#6} & \Glsdesc{#5}%
+}
+
+% param 1 Italian  word
+\NewDocumentCommand{\toAlbanian}{m}{%
+    \Glsdesc{#1}%
+}
